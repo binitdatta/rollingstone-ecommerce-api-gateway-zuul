@@ -1,0 +1,40 @@
+server:
+  port: ${PORT:6080}
+zuul:
+  routes:
+    account:
+      path: /account/**
+      url: http://localhost:9094/rscommerce/pdp-service/account
+    add-to-cart:
+        path: /cart/**
+        url: http://localhost:4092
+    address:
+        path: /address/**
+        url: http://localhost:9092
+    category:
+        path: /category/**
+        url: http://localhost:8092
+    delivery:
+        path: /delivery/**
+        url: http://localhost:9098
+    order:
+        path: /order/**
+        url: http://localhost:4094
+    pricing:
+        path: /pricing/**
+        url: http://localhost:9096
+    product:
+        path: /product/**
+        url: http://localhost:8070
+    promo:
+        path: /promo/**
+        url: http://localhost:5002
+    shipping:
+        path: /shipping/**
+        url: http://localhost:4096
+    spu:
+        path: /spu/**
+        url: http://localhost:4098
+    user:
+        path: /user/**
+        url: http://localhost:9090

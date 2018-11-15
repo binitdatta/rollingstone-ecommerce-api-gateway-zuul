@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: rolingstone-ecommerce-api-gateway-zuul
